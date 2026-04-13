@@ -1,16 +1,16 @@
 {
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev:scripts": "node bin/build.js --dev",
-        "build:scripts": "node bin/build.js",
-        "dev": "npm-run-all --parallel dev:*",
-        "build": "npm-run-all build:*"
-    },
-    "devDependencies": {
-        "@awcodes/filament-plugin-purge": "^1.1.1",
-        "esbuild": "^0.25.0",
-        "npm-run-all": "^4.1.5",
-        "prettier": "^2.7.1"
-    }
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:scripts": "node init && node bin/build.js --dev",
+    "build:scripts": "node init && node bin/build.js",
+    "dev": "node init && npm-run-all --parallel dev:*",
+    "build": "node init && npm-run-all build:*"
+  },
+  "devDependencies": {
+    "@awcodes/filament-plugin-purge": "^1.1.1",
+    "esbuild": "^0.25.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1"
+  }
 }
